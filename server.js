@@ -41,9 +41,6 @@ app.get('/api/bug/save', (req, res) => {
         // })
 })
 
-
-
-
 app.get('/api/bug/:id',(req, res) => {
     const bugId = req.params.id
     bugService.getById(bugId)

@@ -15,7 +15,6 @@ function query() {
     return Promise.resolve(bugs)
 }
 
-
 function getById(id) {
     const bug = bugs.find(bug => bug._id === id)
     if (!bug) return Promise.reject('Bug Does no Exists')
