@@ -38,5 +38,5 @@ app.get('/api/bug/:id',(req, res) => {
 app.get('/api/bug/:id/remove',(req, res) => {
     const bugId = req.params.id
     bugService.remove(bugId)
-.then (bugs => res.send(bugs))
+.then (() => res.send(bugId))
 })
