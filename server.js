@@ -25,3 +25,12 @@ app.get('/api/bug', (req, res) => {
         //     res.status(400).send('Cannot get cars')
         // })
 })
+
+
+app.get('/api/bug/:id',(req, res) => {
+    const bugId = req.params.id
+    bugService.getById(bugId)
+    .then(bug => {
+        res.send(bug)
+    })
+})
