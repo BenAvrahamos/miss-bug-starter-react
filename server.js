@@ -1,9 +1,10 @@
 import express from 'express'
 import { bugService } from './services/bug.service.js'
 
-
-
 const app = express()
+
+app.use(express.static('public'))
+
 // Express Routing:
 app.get('/puki', (req, res) => {
 res.send('Hello Puki')
