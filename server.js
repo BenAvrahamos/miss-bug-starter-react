@@ -27,6 +27,23 @@ app.get('/api/bug', (req, res) => {
 })
 
 
+// Get Car (READ)
+app.get('/api/bug/save', (req, res) => {
+    const bugToSave = {
+        title: req.query.title,
+        _id: req.query._id
+    }
+    bugService.save(bugToSave)
+        .then(bug => res.send(bug))
+        // .catch((err) => {
+        //     loggerService.error('Cannot save car', err)
+        //     res.status(400).send('Cannot save car')
+        // })
+})
+
+
+
+
 app.get('/api/bug/:id',(req, res) => {
     const bugId = req.params.id
     bugService.getById(bugId)

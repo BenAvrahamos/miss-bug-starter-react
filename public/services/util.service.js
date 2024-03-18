@@ -3,7 +3,7 @@ export const utilService = {
     makeLorem,
     getRandomIntInclusive,
     loadFromStorage,
-    saveToStorage,
+    saveToStorage
 }
 
 function makeId(length = 6) {
@@ -43,4 +43,3 @@ function saveToStorage(keyDB, val) {
     const valStr = JSON.stringify(val)
     localStorage.setItem(keyDB, valStr)
 }
-
